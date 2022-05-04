@@ -1,3 +1,5 @@
+import math
+
 class ShoppingCart:
     products_tax = {
         "regular_tax":{
