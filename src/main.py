@@ -39,3 +39,5 @@ def main():
         except:
             print("Please select from the options available")
             continue
+
+main()
