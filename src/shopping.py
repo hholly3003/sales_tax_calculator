@@ -57,3 +57,8 @@ class ShoppingCart:
         for product in self.carts:
             amount += self.calculate_sales_tax(*product)
         return format(amount,'.2f')
+    
+    # rounding up to the nearest 0.05
+    def round_decimals_up(self,number, round=0.05):
+        round_num = math.ceil(number/round)*round
+        return round_num
