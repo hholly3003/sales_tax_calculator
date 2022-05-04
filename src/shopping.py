@@ -62,3 +62,14 @@ class ShoppingCart:
     def round_decimals_up(self,number, round=0.05):
         round_num = math.ceil(number/round)*round
         return round_num
+    
+    # printing out preview of the receipt
+    def preview_receipt(self):
+        for product in self.carts:
+            product_price = self.calculate_price(*product)
+            print(f"{product[0]}, {product[1]}, {product_price}")
+        
+        total = self.total_receipt()
+        sales_tax = self.total_sales_tax()
+        print(f"\nSales Taxes: {sales_tax}")
+        print(f"Total: {total}")
